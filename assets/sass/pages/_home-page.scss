@@ -1,0 +1,178 @@
+.categories-wrapper {
+  background: $light_bg_color;
+  padding: 15px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .categories-wrapper {
+    padding: 4% 0;
+  }
+}
+
+.categories-caption {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+
+  &__icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  &__wrapper {
+    background: $primary_color_two;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 630px;
+  }
+
+  &__description {
+    color: $themeColorTwo;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: calc(100% - 50px);
+  }
+
+  &__title {
+    position: relative;
+    padding-bottom: 76px;
+    &:before {
+      content: '';
+      background: url("/wp-content/themes/nrghouse/assets/img/circles.png") no-repeat center / cover;
+      width: 100%;
+      max-width: 350px;
+      height: 40px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .categories-caption {
+    flex-direction: row;
+    align-items: inherit;
+    justify-content: space-between;
+    padding-bottom: 60px;
+  }
+}
+
+.categories-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+
+  &:hover {
+    & .categories-item__main-image {
+      opacity: 0;
+      z-index: -1;
+      visibility: hidden;
+      transition: all 0.5s;
+    }
+
+    & .categories-item__second-image {
+      opacity: 1;
+      z-index: 1;
+      visibility: visible;
+      transition: all 0.5s;
+    }
+
+    & .categories-item__image-wrapper {
+      &:before {
+        background: lighten($themeColorThree, 25%);
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  &__image-wrapper {
+    background: $primary_color_two;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-bottom: 79.3434331%;
+    overflow: hidden;
+
+    &:before {
+      content: '\f30b';
+      font-family: 'Font Awesome 5 Pro';
+      background: $themeColorThree;
+      color: $primary_color_two;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      z-index: 2;
+      transition: all 0.3s;
+    }
+  }
+
+  &__main-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: cover;
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+    transition: all 0.5s;
+  }
+
+  &__second-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: cover;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+
+  &__title {
+    background: $glass_bg_color;
+    color: $primary_color_two;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 700;
+    padding: 12px 25px;
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+}

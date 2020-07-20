@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'GOTHIC';
+  src: url("assets/fonts/GOTHIC.TTF");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GOTHIC';
+  src: url("assets/fonts/GOTHICB.TTF");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+$fontFamilyOne: 'GOTHIC', sans-serif; // titles
+$fontFamilyTwo: 'GOTHIC', sans-serif; // body
