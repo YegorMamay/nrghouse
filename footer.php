@@ -19,9 +19,9 @@
                         ?>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-12 col-lg-6">
                             <div class="footer__social">
-                                <?php echo $footer_left_column['left_column_social_text']; ?>
+                                <p class="footer__social-text"><?php echo $footer_left_column['left_column_social_text']; ?></p>
                                 <?php echo do_shortcode('[bw-social]'); ?>
                             </div>
                             <div class="footer__phones">
@@ -31,11 +31,11 @@
                                 <?php
                                 $address = get_theme_mod('bw_additional_address');
                                 if (!empty($address)) { ?>
-                                    <?php echo $address; ?>
+                                    <span class="footer__address"><?php echo $address; ?></span>
                                 <?php } ?>
                             </div>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-12 col-lg-6">
                             <?php if (has_nav_menu('footer-nav')) { ?>
                                 <div class="footer-nav">
                                     <?php wp_nav_menu(array(
@@ -67,13 +67,14 @@
             </div>
         </div><!-- .pre-footer end-->
     <?php endif; ?>
-
-    <div class="container">
-        <div class="copyright">
-            <div class="date">© NRG House. <?php echo date('Y'); ?>, усі права захищені</div>
-            <div class="developer">
-                Сайт розроблений
-                <a href="https://brainworks.pro/" target="_blank">BrainWorks</a>
+    <div class="footer__bottom-section">
+        <div class="container">
+            <div class="copyright">
+                <div class="date">© NRG House. <?php echo date('Y'); ?>, усі права захищені</div>
+                <div class="developer">
+                    Сайт розроблений
+                    <a href="https://brainworks.pro/" target="_blank">BrainWorks</a>
+                </div>
             </div>
         </div>
     </div>

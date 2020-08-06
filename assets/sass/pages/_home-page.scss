@@ -176,3 +176,34 @@
     z-index: 1;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .categories-caption {
+    &__title {
+      padding-bottom: 40px;
+      margin-bottom: 20px;
+      &:before {
+        max-width: 250px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .categories-caption {
+    &__wrapper {
+      padding: 25px 15px;
+    }
+
+    &__description {
+      font-size: 14px;
+    }
+  }
+
+  .categories-item {
+    &__title {
+      font-size: 18px;
+    }
+  }
+}
