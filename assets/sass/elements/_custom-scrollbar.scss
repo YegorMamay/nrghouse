@@ -10,17 +10,19 @@
     }
 
     ::-webkit-scrollbar-thumb {
-        background: $themeColorTwo;
+        background: $themeColorThree;
         border: 0 none #fff;
         border-radius: 0;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: #fff;
+        transition: all 0.2s;
+        background: lighten($themeColorThree, 10%);
     }
 
     ::-webkit-scrollbar-thumb:active {
-        background: #aaa;
+        transition: all 0.2s;
+        background: lighten($themeColorThree, 10%);
     }
 
     ::-webkit-scrollbar-track {

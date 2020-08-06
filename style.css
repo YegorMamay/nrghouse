@@ -13360,15 +13360,19 @@ hr.style-three {
     height: 0;
   }
   ::-webkit-scrollbar-thumb {
-    background: #063f60;
+    background: #fdbe3b;
     border: 0 none #fff;
     border-radius: 0;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #fff;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    background: #fecf6d;
   }
   ::-webkit-scrollbar-thumb:active {
-    background: #aaa;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    background: #fecf6d;
   }
   ::-webkit-scrollbar-track {
     background: #14151d;
