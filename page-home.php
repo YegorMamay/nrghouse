@@ -6,7 +6,41 @@
 
 <?php get_header(); ?>
 <?php get_template_part('loops/content', 'home'); ?>
-<div class="categories-wrapper">
+<section class="top-section">
+    <div class="container">
+        <div class="top-section__wrapper">
+            <div class="top-section__row">
+                <div class="top-section__col">
+                    <h2 class="top-section__title h1"><?php echo get_post_meta(get_the_ID(), 'about_company_title', true); ?></h2>
+                    <div class="block-advantages">
+                        <?php
+                        $advantages_list = get_field('advantage_list');
+                        $company_image = get_field('about_company_image');
+                        ?>
+                        <?php foreach ($advantages_list as $items) { ?>
+                        <div class="block-advantages__item">
+                            <img class="block-advantages__icon" src="<?php echo $items['advantage_icon']; ?>" alt="icon">
+                            <div class="block-advantages__title"><?php echo $items['advantage_title']; ?></div>
+                        </div>
+                        <?php } wp_reset_postdata(); ?>
+                    </div>
+                </div>
+                <div class="top-section__col">
+                    <div class="top-section__description-block">
+                        <img class="top-section__icon" src="/wp-content/themes/nrghouse/assets/img/video.svg" alt="icon">
+                        <p class="top-section__description"><?php echo get_post_meta(get_the_ID(), 'about_company_description', true); ?></p>
+                        <p class="top-section__text"><?php echo get_post_meta(get_the_ID(), 'about_company_text', true); ?></p>
+                    </div>
+                    <div class="top-section__middle-block">
+                        <img class="top-section__image" src="<?php echo $company_image; ?>" alt="image">
+                        <button type="button" class="top-section__button js-toggle-request"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="categories-wrapper">
     <div class="container">
         <?php $categories_list = get_field('categories_list'); ?>
         <div class="row">
@@ -37,8 +71,8 @@
             <?php } ?>
         </div>
     </div>
-</div>
-<div class="block-services">
+</section>
+<section class="block-services">
     <div class="block-services__row">
         <div class="block-services__col">
             <div class="block-services__container">
@@ -112,7 +146,7 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <?php get_footer(); ?>
 <script>
 
