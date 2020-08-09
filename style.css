@@ -12386,6 +12386,7 @@ select {
   justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .block-advantages__title {
@@ -12434,6 +12435,16 @@ select {
 @media screen and (min-width: 1200px) {
   .block-advantages {
     max-width: 360px;
+  }
+  .block-advantages:before {
+    content: '';
+    width: 35px;
+    height: 100%;
+    background: url("/wp-content/themes/nrghouse/assets/img/circles-vert.png") no-repeat top/contain;
+    position: absolute;
+    right: -50px;
+    top: 0;
+    z-index: 1;
   }
   .block-advantages__title {
     height: auto;
