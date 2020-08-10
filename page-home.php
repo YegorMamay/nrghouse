@@ -147,37 +147,61 @@
         </div>
     </div>
 </section>
+<section class="bottom-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="bottom-section__image-wrapper">
+                    <img class="bottom-section__image" src="/wp-content/themes/nrghouse/assets/img/form-img.png" alt="image">
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6">
+                <h2 class="bottom-section__title h3"><?php echo get_post_meta(get_the_ID(), 'bottom_block_title', true); ?></h2>
+                <div class="bottom-section__description"><?php echo get_post_meta(get_the_ID(), 'bottom_block_description', true); ?></div>
+                <?php $order_form = get_field('bottom_block_form'); ?>
+                <div class="bottom-section__form-wrapper">
+                    <?php echo do_shortcode($order_form); ?>
+                </div>
+                <div class="bottom-section__description-bottom h3"><?php echo get_post_meta(get_the_ID(), 'bottom_block_text', true); ?></div>
+            </div>
+        </div>
+    </div>
+</section>
 <?php get_footer(); ?>
 <script>
 
-    var servicesTabs =  $('.services-tabs__item');
-    var servicesTabContent = $('.services-content__item');
-    var servicesMobileContent = $('.tab-mobile');
+    (function ($) {
 
-    if($(window).width() < 1200) {
+        var servicesTabs =  $('.services-tabs__item');
+        var servicesTabContent = $('.services-content__item');
+        var servicesMobileContent = $('.tab-mobile');
 
-        servicesTabs.on('click', function () {
+        if($(window).width() < 1200) {
 
-            var currentTab = $(this).next();
+            servicesTabs.on('click', function () {
 
-            servicesTabs.not($(this)).removeClass('active');
-            $(this).toggleClass('active');
-            servicesMobileContent.not(currentTab).slideUp('linear');
-            currentTab.slideToggle('linear');
-        });
-    } else {
+                var currentTab = $(this).next();
 
-        servicesTabs.on('click', function () {
+                servicesTabs.not($(this)).removeClass('active');
+                $(this).toggleClass('active');
+                servicesMobileContent.not(currentTab).slideUp('linear');
+                currentTab.slideToggle('linear');
+            });
+        } else {
 
-            var currentTab = $(this).attr('data-tab');
+            servicesTabs.on('click', function () {
 
-            servicesTabs.not($(this)).removeClass('active');
-            $(this).addClass('active');
-            servicesTabContent.hide();
-            servicesTabContent.removeClass('active');
-            $(currentTab).fadeIn(800);
-            $(currentTab).addClass('active');
-        });
-    }
+                var currentTab = $(this).attr('data-tab');
+
+                servicesTabs.not($(this)).removeClass('active');
+                $(this).addClass('active');
+                servicesTabContent.hide();
+                servicesTabContent.removeClass('active');
+                $(currentTab).fadeIn(800);
+                $(currentTab).addClass('active');
+            });
+        }
+
+    })(jQuery);
 
 </script>
