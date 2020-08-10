@@ -595,9 +595,9 @@
     const updateCartTotalValue = (elemId) => {
 
         localStorage.setItem('currency', $('#cyr-value').val());
-        const totalId = $(elemId);
+        let totalId = $(elemId);
 
-        if (elemId.length > 0) {
+        if ($(elemId).length > 0) {
 
             $(document).bind('ajaxStop.mine', function () {
 

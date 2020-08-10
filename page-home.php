@@ -57,7 +57,7 @@
                 </div>
             </div>
             <?php foreach ($categories_list as $category) { ?>
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-6 col-md-6 col-lg-4">
                     <a href="<?php echo $category['categories_link']; ?>" class="categories-item">
                         <div class="categories-item__image-wrapper">
                             <img class="categories-item__main-image"
@@ -152,14 +152,14 @@
         <div class="row align-items-center">
             <div class="col-12 col-md-12 col-lg-6">
                 <div class="bottom-section__image-wrapper">
-                    <img class="bottom-section__image" src="/wp-content/themes/nrghouse/assets/img/form-img.png" alt="image">
+                    <img class="bottom-section__image" src="<?php echo get_field('bottom_block_image'); ?>" alt="image">
                 </div>
             </div>
             <div class="col-12 col-md-12 col-lg-6">
                 <h2 class="bottom-section__title h3"><?php echo get_post_meta(get_the_ID(), 'bottom_block_title', true); ?></h2>
                 <div class="bottom-section__description"><?php echo get_post_meta(get_the_ID(), 'bottom_block_description', true); ?></div>
                 <?php $order_form = get_field('bottom_block_form'); ?>
-                <div class="bottom-section__form-wrapper">
+                <div class="bottom-section__form-wrapper" id="order-form">
                     <?php echo do_shortcode($order_form); ?>
                 </div>
                 <div class="bottom-section__description-bottom h3"><?php echo get_post_meta(get_the_ID(), 'bottom_block_text', true); ?></div>

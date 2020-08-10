@@ -131,7 +131,7 @@ q:after {
   content: none;
 }
 
-.services-tabs__item, .services-tabs__item:hover, .services-tabs__item:focus, .review-social, .review-slider .slick-arrow, a, .nav .menu-link, .nav .sub-menu-link, .svg-icon {
+.services-tabs__item, .services-tabs__item:hover, .services-tabs__item:focus, #order-form .form-element-html input, #order-form .form-element-html input:focus, #order-form .form-element-html select, #order-form .form-element-html select:focus, #order-form .submit-button, #order-form .submit-button:hover, #order-form .submit-button:focus, .review-social, .review-slider .slick-arrow, a, .nav .menu-link, .nav .sub-menu-link, .svg-icon {
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -10537,7 +10537,7 @@ table th[class*="col-"] {
   clear: both;
 }
 
-.services-tabs__item, .services-tabs__item:hover, .services-tabs__item:focus, .review-social, .review-slider .slick-arrow, a, .nav .menu-link, .nav .sub-menu-link, .svg-icon {
+.services-tabs__item, .services-tabs__item:hover, .services-tabs__item:focus, #order-form .form-element-html input, #order-form .form-element-html input:focus, #order-form .form-element-html select, #order-form .form-element-html select:focus, #order-form .submit-button, #order-form .submit-button:hover, #order-form .submit-button:focus, .review-social, .review-slider .slick-arrow, a, .nav .menu-link, .nav .sub-menu-link, .svg-icon {
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -11195,7 +11195,7 @@ select {
   }
 }
 
-.services-tabs__item, .services-tabs__item:hover, .services-tabs__item:focus, .review-social, .review-slider .slick-arrow, a, .nav .menu-link, .nav .sub-menu-link, .svg-icon {
+.services-tabs__item, .services-tabs__item:hover, .services-tabs__item:focus, #order-form .form-element-html input, #order-form .form-element-html input:focus, #order-form .form-element-html select, #order-form .form-element-html select:focus, #order-form .submit-button, #order-form .submit-button:hover, #order-form .submit-button:focus, .review-social, .review-slider .slick-arrow, a, .nav .menu-link, .nav .sub-menu-link, .svg-icon {
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -12390,8 +12390,9 @@ select {
 }
 
 .block-advantages__title {
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
+  height: 80px;
 }
 
 .block-advantages__item {
@@ -12408,8 +12409,9 @@ select {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 100%;
+  width: 50%;
   margin-bottom: 20px;
+  padding: 0 5px;
 }
 
 .block-advantages__icon {
@@ -12561,7 +12563,7 @@ select {
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -12592,7 +12594,7 @@ select {
   width: 100%;
   height: auto;
   position: relative;
-  padding-bottom: 79.3434331%;
+  padding-bottom: 100%;
   overflow: hidden;
 }
 
@@ -12664,16 +12666,61 @@ select {
 .categories-item__title {
   background: rgba(6, 63, 96, 0.75);
   color: #fff;
-  font-size: 22px;
+  font-size: 15px;
   line-height: 1;
   font-weight: 700;
-  padding: 12px 25px;
+  padding: 10px;
   width: 100%;
   text-align: left;
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: 1;
+}
+
+@media screen and (max-width: 475px) {
+  .categories-wrapper {
+    overflow: hidden;
+  }
+  .categories-wrapper .row {
+    margin-left: -5px;
+    margin-right: -5px;
+    width: auto;
+  }
+  .container {
+    padding: 0 5px;
+  }
+  .col-6 {
+    padding: 0 5px;
+  }
+  .categories-item__title {
+    font-size: 15px;
+    height: 50px;
+    line-height: 1.2;
+    text-align: center;
+    overflow: hidden;
+  }
+  .categories-item__image-wrapper:before {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .categories-item {
+    margin-bottom: 30px;
+  }
+  .categories-item__image-wrapper {
+    padding-bottom: 79.3434331%;
+  }
+  .categories-item__title {
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 700;
+    padding: 12px 25px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -12693,9 +12740,6 @@ select {
   }
   .categories-caption__description {
     font-size: 14px;
-  }
-  .categories-item__title {
-    font-size: 18px;
   }
 }
 
@@ -12937,7 +12981,7 @@ select {
 }
 
 .services-content__title-horizontal {
-  font-size: 30px;
+  font-size: 38px;
   font-weight: 700;
   margin-bottom: 20px;
   color: #384656;
@@ -13174,7 +13218,7 @@ select {
 }
 
 .bottom-section {
-  padding: 20px 0;
+  padding: 30px 0;
   background: url("/wp-content/themes/nrghouse/assets/img/form-bg.jpg") no-repeat center/cover;
 }
 
@@ -13318,6 +13362,175 @@ select {
     -webkit-box-shadow: 0 0 0 0 rgba(9, 95, 144, 0);
     box-shadow: 0 0 0 0 rgba(9, 95, 144, 0);
   }
+}
+
+#order-form .form-cover {
+  width: 100%;
+  max-width: 520px;
+  background: transparent;
+}
+
+#order-form .fc-form {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  position: relative;
+  padding-bottom: 0;
+  background: transparent !important;
+}
+
+#order-form .heading-cover {
+  text-align: left !important;
+}
+
+#order-form .heading-cover span {
+  color: #384656 !important;
+  font-size: 24px !important;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0;
+}
+
+#order-form .form-page-content {
+  padding: 0 !important;
+}
+
+#order-form .form-element-html {
+  padding: 0 0 20px !important;
+}
+
+#order-form .form-element-html .formcraft-icon {
+  color: #063f60;
+  top: 5px;
+}
+
+#order-form .form-element-html .error {
+  top: 5px;
+}
+
+#order-form .form-element-html input {
+  background: #fff !important;
+  border-color: #fff !important;
+  border-radius: 2px;
+  height: 55px;
+  padding: 10px 15px !important;
+  color: #384656 !important;
+}
+
+#order-form .form-element-html input:focus {
+  border-color: #063f60 !important;
+}
+
+#order-form .form-element-html input::-webkit-input-placeholder {
+  color: #afb5b9;
+}
+
+#order-form .form-element-html input::-moz-placeholder {
+  color: #afb5b9;
+}
+
+#order-form .form-element-html input:-ms-input-placeholder {
+  color: #afb5b9;
+}
+
+#order-form .form-element-html input::-ms-input-placeholder {
+  color: #afb5b9;
+}
+
+#order-form .form-element-html input::placeholder {
+  color: #afb5b9;
+}
+
+#order-form .form-element-html select {
+  background: #fff !important;
+  border-color: #fff !important;
+  border-radius: 2px;
+  height: 55px;
+  padding: 10px 15px !important;
+  color: #384656 !important;
+}
+
+#order-form .form-element-html select:focus {
+  border-color: #063f60 !important;
+}
+
+#order-form .form-element-html select::-webkit-input-placeholder {
+  color: #afb5b9;
+}
+
+#order-form .form-element-html select::-moz-placeholder {
+  color: #afb5b9;
+}
+
+#order-form .form-element-html select:-ms-input-placeholder {
+  color: #afb5b9;
+}
+
+#order-form .form-element-html select::-ms-input-placeholder {
+  color: #afb5b9;
+}
+
+#order-form .form-element-html select::placeholder {
+  color: #afb5b9;
+}
+
+#order-form .submit-button {
+  background: #fdbe3b !important;
+  color: #384656;
+  padding: 14px 40px !important;
+  border-radius: 2px !important;
+  border: none !important;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 55px;
+  font-size: 15px !important;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+#order-form .submit-button:hover, #order-form .submit-button:focus {
+  background: #fecf6d !important;
+}
+
+@media screen and (max-width: 1023px) {
+  #order-form .form-cover {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bottom-section__description-bottom {
+    text-align: center;
+  }
+  .bottom-section__description {
+    text-align: center;
+  }
+  .bottom-section__title {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  #order-form .form-page-content {
+    padding: 15px 20px !important;
+  }
+  #order-form .fc-form {
+    padding-bottom: 15px;
+  }
+}
+
+* {
+  border: 1px solid red;
 }
 
 ol.commentlist .comment-body {
@@ -14518,7 +14731,7 @@ hr.style-three {
 .woocommerce button.button.alt,
 .woocommerce input.button.alt, .woocommerce a.added_to_cart {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
@@ -14532,6 +14745,7 @@ hr.style-three {
   font-size: 16px;
   line-height: 1.5;
   border-radius: 0;
+  text-transform: uppercase;
   -webkit-transition: .2s;
   transition: .2s;
 }
@@ -14550,8 +14764,8 @@ hr.style-three {
 .woocommerce button.focus.button,
 .woocommerce input.focus.button, .woocommerce a.focus.added_to_cart {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 3px rgba(56, 70, 86, 0.25);
-  box-shadow: 0 0 0 3px rgba(56, 70, 86, 0.25);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .btn.disabled, html .formcraft-css .fc-form .form-element .submit-cover .disabled.submit-button, .woocommerce #respond input.disabled#submit, .woocommerce a.disabled.button,
@@ -14576,8 +14790,8 @@ hr.style-three {
 .woocommerce button.button:not(:disabled):not(.disabled).active,
 .woocommerce input.button:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active {
   background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .btn:not(:disabled):not(.disabled):active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:focus, .woocommerce a.button:not(:disabled):not(.disabled):active:focus,
@@ -14585,8 +14799,8 @@ hr.style-three {
 .woocommerce input.button:not(:disabled):not(.disabled):active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:focus, .btn:not(:disabled):not(.disabled).active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce button.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce input.button:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(56, 70, 86, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: 0 0 0 3px rgba(56, 70, 86, 0.25), inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: none, none;
+  box-shadow: none, none;
 }
 
 .btn:active, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:active, .woocommerce #respond input#submit:active, .woocommerce a.button:active,
@@ -14610,42 +14824,37 @@ fieldset:disabled .woocommerce a.added_to_cart,
 }
 
 .btn-primary, .woocommerce a.added_to_cart {
-  background: #384656 -webkit-gradient(linear, right top, left top, from(#6a7480), to(#384656)) repeat-x;
-  background: #384656 linear-gradient(-90deg, #6a7480, #384656) repeat-x;
-  color: white;
-  border-color: #384656;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #fdbe3b;
+  color: #384656;
+  border-color: #fdbe3b;
 }
 
 .btn-primary:hover, .woocommerce a.added_to_cart:hover {
-  color: white;
-  background: #425365 -webkit-gradient(linear, right top, left top, from(#717e8c), to(#425365)) repeat-x;
-  background: #425365 linear-gradient(-90deg, #717e8c, #425365) repeat-x;
-  border-color: #425365;
+  color: #485a6f;
+  background-color: #fdcb63;
+  border-color: #fdcb63;
 }
 
 .btn-primary:focus, .woocommerce a.added_to_cart:focus, .btn-primary.focus, .woocommerce a.focus.added_to_cart {
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(56, 70, 86, 0.5);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(56, 70, 86, 0.5);
+  -webkit-box-shadow: 0 0 0 0 rgba(253, 190, 59, 0.5);
+  box-shadow: 0 0 0 0 rgba(253, 190, 59, 0.5);
 }
 
 .btn-primary.disabled, .woocommerce a.disabled.added_to_cart, .btn-primary:disabled, .woocommerce a.added_to_cart:disabled {
   color: #384656;
   background-color: #384656;
-  border-color: #384656;
+  border-color: #fdbe3b;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active {
-  color: white;
-  background-color: #4c5f75;
-  background-image: none;
-  border-color: #425365;
+  color: #384656;
+  background-color: #fecf6d;
+  border-color: #fdcb63;
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .woocommerce a.added_to_cart:not(:disabled):not(.disabled).active:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(56, 70, 86, 0.5);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(56, 70, 86, 0.5);
+  -webkit-box-shadow: 0 0 0 0 rgba(253, 190, 59, 0.5);
+  box-shadow: 0 0 0 0 rgba(253, 190, 59, 0.5);
 }
 
 .btn-secondary, html .formcraft-css .fc-form .form-element .submit-cover .submit-button, .woocommerce #respond input#submit, .woocommerce #respond input#submit.alt, .woocommerce a.button,
@@ -14653,21 +14862,17 @@ fieldset:disabled .woocommerce a.added_to_cart,
 .woocommerce input.button, .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-  background: #063f60 -webkit-gradient(linear, right top, left top, from(#2b5c78), to(#063f60)) repeat-x;
-  background: #063f60 linear-gradient(-90deg, #2b5c78, #063f60) repeat-x;
+  background: #063f60;
   color: white;
   border-color: #063f60;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary:hover, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:hover, .woocommerce #respond input#submit:hover, .woocommerce a.button:hover,
 .woocommerce button.button:hover,
 .woocommerce input.button:hover {
   color: white;
-  background: #084f78 -webkit-gradient(linear, right top, left top, from(#2d698c), to(#084f78)) repeat-x;
-  background: #084f78 linear-gradient(-90deg, #2d698c, #084f78) repeat-x;
-  border-color: #084f78;
+  background-color: #095f90;
+  border-color: #095f90;
 }
 
 .btn-secondary:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:focus, .woocommerce #respond input#submit:focus, .woocommerce a.button:focus,
@@ -14675,8 +14880,8 @@ fieldset:disabled .woocommerce a.added_to_cart,
 .woocommerce input.button:focus, .btn-secondary.focus, html .formcraft-css .fc-form .form-element .submit-cover .focus.submit-button, .woocommerce #respond input.focus#submit, .woocommerce a.focus.button,
 .woocommerce button.focus.button,
 .woocommerce input.focus.button {
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(6, 63, 96, 0.5);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(6, 63, 96, 0.5);
+  -webkit-box-shadow: 0 0 0 0 rgba(6, 63, 96, 0.5);
+  box-shadow: 0 0 0 0 rgba(6, 63, 96, 0.5);
 }
 
 .btn-secondary.disabled, html .formcraft-css .fc-form .form-element .submit-cover .disabled.submit-button, .woocommerce #respond input.disabled#submit, .woocommerce a.disabled.button,
@@ -14696,8 +14901,7 @@ fieldset:disabled .woocommerce a.added_to_cart,
 .woocommerce input.button:not(:disabled):not(.disabled).active {
   color: white;
   background-color: #063f60;
-  background-image: none;
-  border-color: #084f78;
+  border-color: #095f90;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled):active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled):active:focus, .woocommerce a.button:not(:disabled):not(.disabled):active:focus,
@@ -14705,66 +14909,59 @@ fieldset:disabled .woocommerce a.added_to_cart,
 .woocommerce input.button:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, html .formcraft-css .fc-form .form-element .submit-cover .submit-button:not(:disabled):not(.disabled).active:focus, .woocommerce #respond input#submit:not(:disabled):not(.disabled).active:focus, .woocommerce a.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce button.button:not(:disabled):not(.disabled).active:focus,
 .woocommerce input.button:not(:disabled):not(.disabled).active:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(6, 63, 96, 0.5);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(6, 63, 96, 0.5);
+  -webkit-box-shadow: 0 0 0 0 rgba(6, 63, 96, 0.5);
+  box-shadow: 0 0 0 0 rgba(6, 63, 96, 0.5);
 }
 
 .btn-outline-primary {
   background-color: rgba(255, 255, 255, 0);
-  color: #384656;
-  border-color: #384656;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: #fdbe3b;
+  border-color: #fdbe3b;
 }
 
 .btn-outline-primary:hover {
   color: white;
-  background: #384656 -webkit-gradient(linear, right top, left top, from(#56626f), to(#384656)) repeat-x;
-  background: #384656 linear-gradient(-90deg, #56626f, #384656) repeat-x;
-  border-color: #384656;
+  background-color: #fdbe3b;
+  border-color: #fdbe3b;
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(56, 70, 86, 0.5);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(56, 70, 86, 0.5);
+  -webkit-box-shadow: 0 0 0 0 rgba(253, 190, 59, 0.5);
+  box-shadow: 0 0 0 0 rgba(253, 190, 59, 0.5);
 }
 
 .btn-outline-primary.disabled, .btn-outline-primary:disabled {
   color: #384656;
   background-color: #384656;
-  border-color: #384656;
+  border-color: #fdbe3b;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active {
-  color: color-yiq(#242d37);
-  background-color: #242d37;
-  background-image: none;
-  border-color: #1f272f;
+  color: color-yiq(#fcad09);
+  background-color: #fcad09;
+  border-color: #f6a703;
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(56, 70, 86, 0.5);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(56, 70, 86, 0.5);
+  -webkit-box-shadow: 0 0 0 0 rgba(253, 190, 59, 0.5);
+  box-shadow: 0 0 0 0 rgba(253, 190, 59, 0.5);
 }
 
 .btn-outline-secondary {
   background-color: rgba(255, 255, 255, 0);
   color: #063f60;
   border-color: #063f60;
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-outline-secondary:hover {
   color: white;
-  background: #063f60 -webkit-gradient(linear, right top, left top, from(#2b5c78), to(#063f60)) repeat-x;
-  background: #063f60 linear-gradient(-90deg, #2b5c78, #063f60) repeat-x;
+  background-color: #063f60;
   border-color: #063f60;
 }
 
 .btn-outline-secondary:focus, .btn-outline-secondary.focus {
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(6, 63, 96, 0.5);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(6, 63, 96, 0.5);
+  -webkit-box-shadow: 0 0 0 0 rgba(6, 63, 96, 0.5);
+  box-shadow: 0 0 0 0 rgba(6, 63, 96, 0.5);
 }
 
 .btn-outline-secondary.disabled, .btn-outline-secondary:disabled {
@@ -14776,17 +14973,16 @@ fieldset:disabled .woocommerce a.added_to_cart,
 .btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active {
   color: color-yiq(#032030);
   background-color: #032030;
-  background-image: none;
   border-color: #021824;
 }
 
 .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus {
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(6, 63, 96, 0.5);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125), 0 0 0 0 rgba(6, 63, 96, 0.5);
+  -webkit-box-shadow: 0 0 0 0 rgba(6, 63, 96, 0.5);
+  box-shadow: 0 0 0 0 rgba(6, 63, 96, 0.5);
 }
 
 .btn-link {
-  font-weight: 400;
+  font-weight: 700;
   color: #384656;
   background-color: transparent;
 }
