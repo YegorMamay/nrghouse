@@ -65,7 +65,7 @@
                             <img class="categories-item__second-image"
                                  src="<?php echo $category['categories_hover_image']; ?>" alt="image">
                         </div>
-                        <div class="categories-item__title"><?php echo $category['categories_title']; ?></div>
+                        <div class="categories-item__title"><span><?php echo $category['categories_title']; ?></span></div>
                     </a>
                 </div>
             <?php } ?>

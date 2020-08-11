@@ -12633,6 +12633,8 @@ select {
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   max-height: 100%;
   margin: auto;
@@ -12651,6 +12653,8 @@ select {
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   max-height: 100%;
   margin: auto;
@@ -12665,17 +12669,40 @@ select {
 
 .categories-item__title {
   background: rgba(6, 63, 96, 0.75);
-  color: #fff;
-  font-size: 15px;
-  line-height: 1;
-  font-weight: 700;
-  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
-  text-align: left;
+  height: 50px;
+  overflow: hidden;
+  padding: 0 10px;
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: 1;
+}
+
+.categories-item__title span {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 38px;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 475px) {
@@ -12692,13 +12719,6 @@ select {
   }
   .col-6 {
     padding: 0 5px;
-  }
-  .categories-item__title {
-    font-size: 15px;
-    height: 50px;
-    line-height: 1.2;
-    text-align: center;
-    overflow: hidden;
   }
   .categories-item__image-wrapper:before {
     width: 30px;
@@ -12717,9 +12737,11 @@ select {
   }
   .categories-item__title {
     font-size: 22px;
-    line-height: 1;
-    font-weight: 700;
     padding: 12px 25px;
+  }
+  .categories-item__title span {
+    font-size: 22px;
+    text-align: left;
   }
 }
 
@@ -13443,7 +13465,7 @@ select {
 }
 
 #order-form .form-element-html select {
-  background: #fff !important;
+  background-color: #fff !important;
   border-color: #fff !important;
   border-radius: 2px;
   height: 55px;
@@ -13527,10 +13549,6 @@ select {
   #order-form .fc-form {
     padding-bottom: 15px;
   }
-}
-
-* {
-  border: 1px solid red;
 }
 
 ol.commentlist .comment-body {
@@ -16573,4 +16591,8 @@ img {
   .page-404 {
     background-image: none;
   }
+}
+
+hr {
+  border-color: rgba(0, 0, 0, 0.1);
 }

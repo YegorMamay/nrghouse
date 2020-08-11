@@ -68,126 +68,130 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "blocks/list-category";
 
 ::selection {
-    text-shadow: none;
-    color: $selectionFontColor;
-    background-color: $selectionBgColor;
+  text-shadow: none;
+  color: $selectionFontColor;
+  background-color: $selectionBgColor;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-    @if ($debug) {
-        outline: 1px solid red !important;
-    }
+  @if ($debug) {
+    outline: 1px solid red !important;
+  }
 
-    &,
-    &::before,
-    &::after {
-        box-sizing: inherit;
-    }
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
 }
 
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    min-width: 320px;
-    position: relative;
-    color: $bodyFontColor;
-    font: 400 16px/1.5 $fontFamilyTwo;
-    background-color: $bodyBgColor;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    max-width: 100%;
+  margin: 0;
+  min-width: 320px;
+  position: relative;
+  color: $bodyFontColor;
+  font: 400 16px/1.5 $fontFamilyTwo;
+  background-color: $bodyBgColor;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
 }
 
 .wrapper {
-    position: relative;
-    overflow-x: hidden;
-    min-height: 100%;
-    padding-top: 65px;
-    width: 100%;
-    max-width: 2100px;
-    margin-left: auto;
-    margin-right: auto;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100%;
+  padding-top: 65px;
+  width: 100%;
+  max-width: 2100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 1201px) {
-    .wrapper {
-        padding-top: 0;
-    }
+  .wrapper {
+    padding-top: 0;
+  }
 }
 
 b,
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 img {
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 100%; // не удалять
-    height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%; // не удалять
+  height: auto;
 }
 
 :focus {
-    outline: 0;
+  outline: 0;
 }
 
 .body-overflow {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .svg-icon {
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    @extend %smooth_animation;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  @extend %smooth_animation;
 }
 
 .kama_breadcrumbs {
-    padding: 10px 0;
-    font-size: 14px;
-    margin-bottom: 10px;
+  padding: 10px 0;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .page-name, .page-title {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .page-404 {
-    width: 90%;
-    max-width: 1170px;
-    margin: 0 auto;
-    height: 90vh;
-    background: image-url('404.png') no-repeat center center;
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 90vh;
+  background: image-url('404.png') no-repeat center center;
 
-    .contain {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  .contain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        @media #{$tablet-max} {
-            display: block;
+    @media #{$tablet-max} {
+      display: block;
 
-            div {
-                margin-bottom: 20px;
-            }
-        }
+      div {
+        margin-bottom: 20px;
+      }
     }
+  }
 
-    @media (max-width: 768px) {
-        background-image: none;
-    }
+  @media (max-width: 768px) {
+    background-image: none;
+  }
+}
+
+hr {
+  border-color: rgba(0, 0, 0, 0.1);
 }

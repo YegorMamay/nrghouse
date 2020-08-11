@@ -395,6 +395,8 @@
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
     max-width: 100%;
     max-height: 100%;
     margin: auto;
@@ -411,6 +413,8 @@
     bottom: 0;
     left: 0;
     right: 0;
+    width: 100%;
+    height: 100%;
     max-width: 100%;
     max-height: 100%;
     margin: auto;
@@ -423,17 +427,32 @@
 
   &__title {
     background: $glass_bg_color;
-    color: $primary_color_two;
-    font-size: 15px;
-    line-height: 1;
-    font-weight: 700;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    text-align: left;
+    height: 50px;
+    overflow: hidden;
+    padding: 0 10px;
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: 1;
+
+
+    & span {
+      color: $primary_color_two;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 700;
+      text-align: center;
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 38px;
+      overflow: hidden;
+    }
   }
 }
 
@@ -457,13 +476,6 @@
   }
 
   .categories-item {
-    &__title {
-      font-size: 15px;
-      height: 50px;
-      line-height: 1.2;
-      text-align: center;
-      overflow: hidden;
-    }
 
     &__image-wrapper {
       &:before {
@@ -487,9 +499,12 @@
 
     &__title {
       font-size: 22px;
-      line-height: 1;
-      font-weight: 700;
       padding: 12px 25px;
+
+      & span {
+        font-size: 22px;
+        text-align: left;
+      }
     }
   }
 }
@@ -1104,7 +1119,7 @@
     }
 
     & select {
-      background: $primary_color_two !important;
+      background-color: $primary_color_two !important;
       border-color: $primary_color_two !important;
       border-radius: 2px;
       height: 55px;
@@ -1181,8 +1196,5 @@
       padding-bottom: 15px;
     }
   }
-}
 
-* {
-  border: 1px solid red;
 }
