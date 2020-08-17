@@ -191,7 +191,7 @@
     <div class="nav-mobile-header">
         <div class="logo">
             <?php get_default_logo_link([
-                'name' => 'logo-white.svg',
+                'name' => 'logo.svg',
                 'options' => [
                     'class' => 'logo-img',
                     'width' => 120,

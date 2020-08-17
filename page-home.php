@@ -5,7 +5,9 @@
 ?>
 
 <?php get_header(); ?>
-<?php get_template_part('loops/content', 'home'); ?>
+<div class="main-slider">
+    <?php get_template_part('loops/content', 'home'); ?>
+</div>
 <section class="top-section">
     <div class="container">
         <div class="top-section__wrapper">

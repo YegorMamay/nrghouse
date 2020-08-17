@@ -17,9 +17,10 @@
     padding: 7.5px 15px;
     top: 0;
     left: 0;
-    background-color: rgba($themeColorTwo, 0.95);
+    background-color: $light_bg_color;
+    border-bottom: 1px solid $themeColorTwo;
     text-align: left;
-    z-index: 99;
+    z-index: 1000000000;
 
     img {
       height: auto;
@@ -28,6 +29,23 @@
 
     .hamburger {
       display: block;
+
+      &-inner {
+        background-color: $themeColorTwo;
+
+        &:before {
+          background-color: $themeColorTwo;
+        }
+
+        &:after {
+          background-color: $themeColorTwo;
+        }
+      }
+
+      &:hover, &:focus {
+        outline: none;
+        box-shadow: none;
+      }
     }
   }
 
@@ -42,7 +60,7 @@
     width: 100%;
     height: 100%;
     margin: 0;
-    z-index: 100;
+    z-index: 1000000000;
     overflow: auto;
     background-color: $themeColorTwo;
     will-change: transform;
@@ -208,7 +226,7 @@
     }
 
     &-number {
-      color: $primary_color_two;
+      color: $themeColorOne;
       font-size: 14px;
       line-height: 1;
       padding: 0;
@@ -242,7 +260,7 @@
 }
 
 .mobile-block {
-  background: $light_bg_color;
+  background: rgba($themeColorTwo, 0.95);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -251,6 +269,7 @@
   padding: 10px 15px;
 
   &__description {
+    color: $primary_color_two;
     font-size: 14px;
 
     & br {
@@ -263,6 +282,7 @@
   }
 
   &__field {
+    color: $primary_color_two;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -285,6 +305,7 @@
     flex-direction: column;
     width: 100%;
     font-size: 14px;
+    color: $primary_color_two;
 
     & .social-mob {
       margin: 6px 0;
